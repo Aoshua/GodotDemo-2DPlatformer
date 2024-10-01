@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=4 uid="uid://brf7vyy53na6a"]
+
+[ext_resource type="TileSet" uid="uid://0ru3c085gen2" path="res://assets/tileset.tres" id="1_eyn08"]
+[ext_resource type="PackedScene" uid="uid://cufqv7utb6ugv" path="res://src/actors/player.tscn" id="2_p8t3j"]
+[ext_resource type="PackedScene" uid="uid://c0wq32ewc4c06" path="res://src/actors/enemy.tscn" id="3_4780s"]
+
+[node name="LevelTemplate" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-25, -27)
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAAAAAAAAAgAAQAAAAAAAAABAAgAAQAAAAAAAAACAAgAAQAAAAAAAAADAAgAAQAAAAAAAAAEAAgAAQAAAAAAAAAFAAgAAQAAAAAAAAAGAAgAAQAAAAAAAAAHAAgAAQAAAAAAAAAIAAgAAQAAAAAAAAAJAAgAAQAAAAAAAAAKAAgAAQAAAAAAAAALAAgAAQAAAAAAAAAMAAgAAQAAAAAAAAANAAgAAQAAAAAAAAAOAAgAAQAAAAAAAAAOAAcAAQAAAAAAAAAOAAYAAQAAAAAAAAAOAAUAAQAAAAAAAAAOAAQAAQAAAAAAAAAOAAMAAQAAAAAAAAAOAAIAAQAAAAAAAAAOAAEAAQAAAAAAAAAOAAAAAQAAAAAAAAAFAAcAAQAAAAAAAAAGAAcAAQAAAAAAAAA=")
+tile_set = ExtResource("1_eyn08")
+
+[node name="Player" parent="." instance=ExtResource("2_p8t3j")]
+position = Vector2(170, 367)
+
+[node name="Enemy" parent="." instance=ExtResource("3_4780s")]
+position = Vector2(1010, 364)
