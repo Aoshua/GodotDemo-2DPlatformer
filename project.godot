@@ -13,7 +13,6 @@ config_version=5
 config/name="Platformer"
 run/main_scene="res://src/levels/level_template.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://icon.svg"
 
 [dotnet]
 

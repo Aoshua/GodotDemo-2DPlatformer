@@ -4,7 +4,7 @@ func _ready() -> void:
 	velocity.x = -speed.x
 
 func _on_stop_detector_body_entered(body: Node2D) -> void:
-	if body.global_position.y > %StopDetector.global_position.y:
+	if body.global_position.y > %StompDetector.global_position.y:
 		return 
 	get_node("CollisionShape2D").disabled = true
 	queue_free()

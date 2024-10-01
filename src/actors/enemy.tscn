@@ -7,7 +7,7 @@
 size = Vector2(108, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfdxn"]
-size = Vector2(90, 14)
+size = Vector2(90, 32)
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
@@ -27,13 +27,13 @@ shape = SubResource("RectangleShape2D_7yxl1")
 position = Vector2(0, -11)
 rect = Rect2(-50, -50, 100, 60)
 
-[node name="StopDetector" type="Area2D" parent="."]
+[node name="StompDetector" type="Area2D" parent="."]
 unique_name_in_owner = true
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StopDetector"]
-position = Vector2(0, -81)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StompDetector"]
+position = Vector2(0, -78)
 shape = SubResource("RectangleShape2D_tfdxn")
 debug_color = Color(0.159603, 0.624902, 0.456134, 0.42)
 
-[connection signal="body_entered" from="StopDetector" to="." method="_on_stop_detector_body_entered"]
+[connection signal="body_entered" from="StompDetector" to="." method="_on_stop_detector_body_entered"]

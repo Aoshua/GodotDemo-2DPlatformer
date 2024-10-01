@@ -25,6 +25,16 @@ shape = SubResource("RectangleShape2D_7yxl1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -245)
+limit_left = 0
+limit_top = 0
+limit_right = 6456
+limit_bottom = 693
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_right_margin = 0.0
 
 [node name="EnemyDetector" type="Area2D" parent="."]
 collision_layer = 0
