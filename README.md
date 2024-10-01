@@ -6,4 +6,4 @@ Godot version: 4.3
 
 ### Features:
 
--   2D Player movement accounts for gravity
+-   Player movement accounts for gravity
