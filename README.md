@@ -15,4 +15,6 @@ Godot version: 4.3
 ### Things to "round it out":
 
 -   Upon death, reset level
+-   Upon game completion, option to reset game
+-   Game controls for mobile
 -   Score system
