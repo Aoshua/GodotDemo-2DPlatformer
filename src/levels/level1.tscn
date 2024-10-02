@@ -1,0 +1,109 @@
+[gd_scene load_steps=8 format=4 uid="uid://brf7vyy53na6a"]
+
+[ext_resource type="Texture2D" uid="uid://b7n1ifr3tdfcc" path="res://assets/background.png" id="1_mtlxc"]
+[ext_resource type="TileSet" uid="uid://0ru3c085gen2" path="res://assets/tileset.tres" id="2_n4fo2"]
+[ext_resource type="PackedScene" uid="uid://cufqv7utb6ugv" path="res://src/actors/player.tscn" id="3_erv10"]
+[ext_resource type="PackedScene" uid="uid://c0wq32ewc4c06" path="res://src/actors/enemy.tscn" id="4_dnkdj"]
+[ext_resource type="PackedScene" uid="uid://dt7fnkaebphjn" path="res://src/objects/coin.tscn" id="5_rcoje"]
+[ext_resource type="PackedScene" uid="uid://dtnyqkcg2j0ny" path="res://src/objects/portal.tscn" id="6_tywxa"]
+[ext_resource type="PackedScene" uid="uid://hfkgfjpvays2" path="res://src/levels/level2.tscn" id="7_h8fqn"]
+
+[node name="LevelTemplate" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -960.0
+offset_right = 960.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+scale = Vector2(0.863088, 0.815134)
+texture = ExtResource("1_mtlxc")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-25, -27)
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAAAAAAAAAgAAQAAAAAAAAABAAgAAQAAAAAAAAACAAgAAQAAAAAAAAADAAgAAQAAAAAAAAAEAAgAAQAAAAAAAAAFAAgAAQAAAAAAAAAGAAgAAQAAAAAAAAAHAAgAAQAAAAAAAAAIAAgAAQAAAAAAAAAJAAgAAQAAAAAAAAAKAAgAAQAAAAAAAAALAAgAAQAAAAAAAAAMAAgAAQAAAAAAAAANAAgAAQAAAAAAAAAOAAgAAQAAAAAAAAAPAAgAAQAAAAAAAAAQAAgAAQAAAAAAAAARAAgAAQAAAAAAAAASAAgAAQAAAAAAAAATAAgAAQAAAAAAAAAUAAgAAQAAAAAAAAAVAAgAAQAAAAAAAAAWAAgAAQAAAAAAAAAXAAgAAQAAAAAAAAAYAAgAAQAAAAAAAAAZAAgAAQAAAAAAAAAaAAgAAQAAAAAAAAABAAUAAQAAAAAAAAABAAYAAQAAAAAAAAABAAcAAQAAAAAAAAACAAUAAQAAAAAAAAACAAYAAQAAAAAAAAACAAcAAQAAAAAAAAAMAAYAAQAAAAAAAAAMAAcAAQAAAAAAAAANAAYAAQAAAAAAAAANAAcAAQAAAAAAAAAOAAYAAQAAAAAAAAAOAAcAAQAAAAAAAAAPAAYAAQAAAAAAAAAPAAcAAQAAAAAAAAAQAAYAAQAAAAAAAAAQAAcAAQAAAAAAAAARAAcAAQAAAAAAAAAbAAgAAQAAAAAAAAAcAAgAAQAAAAAAAAAdAAgAAQAAAAAAAAAeAAgAAQAAAAAAAAAfAAgAAQAAAAAAAAAgAAgAAQAAAAAAAAAhAAgAAQAAAAAAAAAiAAgAAQAAAAAAAAAjAAgAAQAAAAAAAAAkAAgAAQAAAAAAAAAlAAgAAQAAAAAAAAAmAAgAAQAAAAAAAAAnAAgAAQAAAAAAAAAoAAgAAQAAAAAAAAAoAAcAAQAAAAAAAAApAAcAAQAAAAAAAAAqAAcAAQAAAAAAAAArAAcAAQAAAAAAAAApAAgAAQAAAAAAAAAqAAgAAQAAAAAAAAArAAgAAQAAAAAAAAApAAYAAQAAAAAAAAAqAAYAAQAAAAAAAAArAAYAAQAAAAAAAAAsAAcAAQAAAAAAAAAqAAUAAQAAAAAAAAAsAAgAAQAAAAAAAAAqAAQAAQAAAAAAAAAtAAgAAQAAAAAAAAAuAAgAAQAAAAAAAAAvAAgAAQAAAAAAAAAwAAgAAQAAAAAAAAAxAAgAAQAAAAAAAAAyAAgAAQAAAAAAAAAzAAgAAQAAAAAAAAA0AAgAAQAAAAAAAAAyAAUAAQAAAAAAAAAzAAUAAQAAAAAAAAA0AAUAAQAAAAAAAAA1AAUAAQAAAAAAAAA2AAgAAQAAAAAAAAA3AAgAAQAAAAAAAAA4AAgAAQAAAAAAAAA5AAgAAQAAAAAAAAA1AAgAAQAAAAAAAAA6AAgAAQAAAAAAAAA7AAgAAQAAAAAAAAA8AAgAAQAAAAAAAAA9AAgAAQAAAAAAAAA+AAgAAQAAAAAAAAA7AAcAAQAAAAAAAAA8AAcAAQAAAAAAAAA8AAYAAQAAAAAAAAA5AAMAAQAAAAAAAAA6AAMAAQAAAAAAAAA4AAMAAQAAAAAAAAA/AAgAAQAAAAAAAABAAAgAAQAAAAAAAABBAAgAAQAAAAAAAABCAAgAAQAAAAAAAABDAAgAAQAAAAAAAABEAAgAAQAAAAAAAABFAAgAAQAAAAAAAABGAAgAAQAAAAAAAABHAAgAAQAAAAAAAABIAAgAAQAAAAAAAABJAAgAAQAAAAAAAABKAAgAAQAAAAAAAABLAAgAAQAAAAAAAABMAAgAAQAAAAAAAABNAAgAAQAAAAAAAABOAAgAAQAAAAAAAABPAAgAAQAAAAAAAABQAAAAAQAAAAAAAABQAAEAAQAAAAAAAABQAAIAAQAAAAAAAABQAAMAAQAAAAAAAABQAAQAAQAAAAAAAABQAAUAAQAAAAAAAABQAAYAAQAAAAAAAABQAAcAAQAAAAAAAABQAAgAAQAAAAAAAABHAAUAAQAAAAAAAABIAAQAAQAAAAAAAABJAAMAAQAAAAAAAABKAAMAAQAAAAAAAABLAAMAAQAAAAAAAAA=")
+tile_set = ExtResource("2_n4fo2")
+
+[node name="Player" parent="." instance=ExtResource("3_erv10")]
+position = Vector2(146, 330)
+
+[node name="Enemy" parent="." instance=ExtResource("4_dnkdj")]
+position = Vector2(2777, 612)
+
+[node name="Enemy2" parent="." instance=ExtResource("4_dnkdj")]
+position = Vector2(4576, 212)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_dnkdj")]
+position = Vector2(5206, 611)
+
+[node name="Enemy4" parent="." instance=ExtResource("4_dnkdj")]
+position = Vector2(6075, 610)
+
+[node name="Coin" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(746, 481)
+
+[node name="Coin2" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(844, 364)
+
+[node name="Coin3" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(1002, 347)
+
+[node name="Coin4" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(2132, 461)
+
+[node name="Coin5" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(2230, 344)
+
+[node name="Coin6" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(2388, 327)
+
+[node name="Coin7" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(3378, 188)
+
+[node name="Coin8" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(3610, 366)
+
+[node name="Coin9" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(3698, 468)
+
+[node name="Coin10" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(3814, 522)
+
+[node name="Coin11" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(6299, 560)
+
+[node name="Coin12" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(6203, 560)
+
+[node name="Coin13" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(6299, 470)
+
+[node name="Coin14" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(6203, 470)
+
+[node name="Coin15" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(6299, 380)
+
+[node name="Coin16" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(6203, 380)
+
+[node name="Coin17" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(6299, 290)
+
+[node name="Coin18" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(6203, 290)
+
+[node name="Coin19" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(6299, 200)
+
+[node name="Coin20" parent="." instance=ExtResource("5_rcoje")]
+position = Vector2(6203, 200)
+
+[node name="Portal2D" parent="." instance=ExtResource("6_tywxa")]
+position = Vector2(5939, 224)
+next_scene = ExtResource("7_h8fqn")

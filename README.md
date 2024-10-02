@@ -8,4 +8,11 @@ Godot version: 4.3
 
 -   2D gravity
 -   Mobs stomp box
--   Fluid camera movement
+-   Fluid camera movement & camera bounds
+-   Custom animations such as bounce and fade in/out
+-   Navigation between levels
+
+### Things to "round it out":
+
+-   Upon death, reset level
+-   Score system
