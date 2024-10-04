@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dt7fnkaebphjn" path="res://src/objects/coin.tscn" id="5_ti1eo"]
 [ext_resource type="PackedScene" uid="uid://dtnyqkcg2j0ny" path="res://src/objects/portal.tscn" id="6_x8ohu"]
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="Level2" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -100

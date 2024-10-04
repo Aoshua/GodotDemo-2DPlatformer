@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cufqv7utb6ugv"]
+[gd_scene load_steps=6 format=3 uid="uid://cufqv7utb6ugv"]
 
 [ext_resource type="Texture2D" uid="uid://ba6lkcbsi6bg2" path="res://assets/player.png" id="1_f4fq5"]
 [ext_resource type="Script" path="res://src/actors/player.gd" id="1_w8rrw"]
+[ext_resource type="PackedScene" uid="uid://b7blbxix4wrgc" path="res://src/joystick.tscn" id="3_d3i85"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yxl1"]
 size = Vector2(78, 88)
@@ -45,6 +46,11 @@ monitorable = false
 position = Vector2(0, -43.5)
 shape = SubResource("RectangleShape2D_qj2kw")
 debug_color = Color(0.68626, 0.309296, 0.974039, 0.42)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Joystick" parent="CanvasLayer" instance=ExtResource("3_d3i85")]
+position = Vector2(33, 437)
 
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_enemy_detector_area_entered"]
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_enemy_detector_body_entered"]
